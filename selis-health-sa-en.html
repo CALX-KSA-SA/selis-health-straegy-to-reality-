@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SELIS HEALTH - A Dedicated Transformation Platform" />
+  <title>SELIS HEALTH</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    img { max-width: 100%; height: auto; }
+    .healthcare-gradient { background: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #10b981 100%); }
+    .whatsapp-float {
+      position: fixed;
+      width: 42px;
+      height: 42px;
+      bottom: 20px;
+      right: 20px;
+      background-color: rgba(37, 211, 102, 0.75);
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 22px;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .whatsapp-float:hover {
+      background-color: rgba(32, 186, 90, 0.9);
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+    }
+    .whatsapp-tooltip {
+      position: absolute;
+      left: 70px;
+      background: white;
+      color: #333;
+      padding: 10px 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      white-space: nowrap;
+      font-size: 14px;
+      font-weight: bold;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .whatsapp-float:hover .whatsapp-tooltip {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-md fixed top-0 w-full z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-3 md:p-4">
+      <div class="flex items-center gap-4">
+        <a href="https://calx.sa" target="_blank" rel="noopener noreferrer">
+          <img src="logo-1.png" alt="Selis" class="h-8 md:h-12 hover:opacity-80 transition" loading="lazy">
+        </a>
+        <a href="index-sa-en.html" class="text-teal-600 hover:text-teal-700 font-semibold text-sm">← Back to Home</a>
+      </div>
+      <nav class="hidden md:flex space-x-8 text-gray-700 font-semibold text-sm md:text-base">
+        <a href="#home" class="hover:text-teal-600 transition">Home</a>
+        <a href="#problem" class="hover:text-teal-600 transition">Challenges</a>
+        <a href="#solutions" class="hover:text-teal-600 transition">Solutions</a>
+        <a href="#integration" class="hover:text-teal-600 transition">Integration</a>
+        <a href="#impact" class="hover:text-teal-600 transition">Impact</a>
+        <a href="selis-health-sa.html" class="text-teal-600 hover:text-teal-800 transition">العربية</a>
+      </nav>
+      <button class="md:hidden text-gray-700" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="text-center pt-24 md:pt-40 pb-16 md:pb-28 healthcare-gradient text-white">
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
+      <div class="flex items-center justify-center gap-4 mb-6" data-aos="fade-down">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+        </svg>
+      </div>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 md:mb-8 leading-tight" data-aos="fade-up">
+        SELIS HEALTH
+      </h1>
+      <p class="text-lg sm:text-xl md:text-2xl opacity-90 max-w-4xl mx-auto mb-6 md:mb-8 leading-relaxed px-4" data-aos="fade-up" data-aos-delay="200">
+        The Specialized Digital Transformation Platform
+      </p>
+      <p class="text-base sm:text-lg md:text-xl opacity-80 max-w-3xl mx-auto mb-12 md:mb-16 px-4" data-aos="fade-up" data-aos-delay="300">
+        Empowering health entities to execute strategic project portfolios with precision and complete transparency
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-3 md:gap-4 mt-12 md:mt-16 px-4" data-aos="zoom-in" data-aos-delay="400">
+        <a href="#solutions" class="px-8 py-4 text-base md:text-lg font-bold bg-white text-teal-700 rounded-full hover:bg-gray-100 transition shadow-lg">
+          Explore Solutions
+        </a>
+        <a href="#problem" class="px-8 py-4 text-base md:text-lg font-bold bg-transparent border-2 border-white text-white rounded-full hover:bg-white hover:text-teal-700 transition">
+          SELIS HEALTH Challenges
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEALTHCARE PROBLEM -->
+  <section id="problem" class="max-w-7xl mx-auto py-16 md:py-24 px-4 md:px-6">
+    <div class="text-center mb-12 md:mb-16">
+      <span class="text-xs md:text-sm font-bold text-teal-600 uppercase tracking-widest" data-aos="fade-up">Operational Challenges</span>
+      <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mt-4" data-aos="fade-up" data-aos-delay="100">Challenges SELIS HEALTH Addresses</h3>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12">
+      
+      <!-- Resource Management -->
+      <div class="bg-white p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition" data-aos="fade-up">
+        <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+        </div>
+        <h4 class="text-xl md:text-2xl font-bold mb-4 text-center text-gray-900">Resource Constraints</h4>
+        <ul class="space-y-2 text-gray-700 text-sm md:text-base">
+          <li class="flex items-start gap-2">
+            <span class="text-red-600">•</span>
+            <span>Resource allocation limitations</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-red-600">•</span>
+            <span>Elevated manual task volume</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-red-600">•</span>
+            <span>Budget variance</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-red-600">•</span>
+            <span>Escalating workload pressure</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Digital Transformation -->
+      <div class="bg-white p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <h4 class="text-xl md:text-2xl font-bold mb-4 text-center text-gray-900">Digital Maturity Gap</h4>
+        <ul class="space-y-2 text-gray-700 text-sm md:text-base">
+          <li class="flex items-start gap-2">
+            <span class="text-orange-600">•</span>
+            <span>System fragmentation</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-orange-600">•</span>
+            <span>Compliance overhead costs</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-orange-600">•</span>
+            <span>Communication channel proliferation</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Visibility & Transparency -->
+      <div class="bg-white p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ca8a04" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+        </div>
+        <h4 class="text-xl md:text-2xl font-bold mb-4 text-center text-gray-900">Transparency Deficiency</h4>
+        <ul class="space-y-2 text-gray-700 text-sm md:text-base">
+          <li class="flex items-start gap-2">
+            <span class="text-yellow-600">•</span>
+            <span>Isolated data systems</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-yellow-600">•</span>
+            <span>Tactical decision-making</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-yellow-600">•</span>
+            <span>Limited knowledge transfer</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-yellow-600">•</span>
+            <span>Delayed operational intelligence</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-yellow-600">•</span>
+            <span>Inconsistent quality metrics</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOLUTIONS -->
+  <section id="solutions" class="bg-gradient-to-br from-teal-50 to-green-50 py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-12 md:mb-16">
+        <span class="text-xs md:text-sm font-bold text-teal-600 uppercase tracking-widest" data-aos="fade-up">Solutions</span>
+        <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mt-4" data-aos="fade-up" data-aos-delay="100">How SELIS HEALTH Delivers Strategic Transformation</h3>
+      </div>
+
+      <!-- Solution Group 1: Dashboards & Automation -->
+      <div class="bg-white rounded-3xl shadow-xl p-6 md:p-10 mb-8" data-aos="fade-up">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+          </div>
+          <h4 class="text-2xl md:text-3xl font-black text-gray-900">Dashboards & Automation</h4>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-teal-50 p-6 rounded-2xl">
+            <h5 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Real-Time Dashboards</h5>
+            <p class="text-gray-700 leading-relaxed">Visualize occupancy rates, workforce utilisation, and resource performance — supporting data-driven planning</p>
+          </div>
+          <div class="bg-green-50 p-6 rounded-2xl">
+            <h5 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Workflow Automation</h5>
+            <p class="text-gray-700 leading-relaxed">Eliminates redundant admin tasks through automated approvals, reminders, and prefilled templates — freeing staff to focus on patient care</p>
+          </div>
+          <div class="bg-blue-50 p-6 rounded-2xl">
+            <h5 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Automated Compliance Reports</h5>
+            <p class="text-gray-700 leading-relaxed">Integrates data from multiple systems for internal and regulatory reviews with one click</p>
+          </div>
+          <div class="bg-purple-50 p-6 rounded-2xl">
+            <h5 class="text-lg md:text-xl font-bold text-gray-900 mb-3">AI-Driven Workload Balancing</h5>
+            <p class="text-gray-700 leading-relaxed">AI-driven workload balancing and progress tracking provide visibility into bottlenecks, helping distribute effort more evenly</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Solution Group 2: Integration & Financial -->
+      <div class="bg-white rounded-3xl shadow-xl p-6 md:p-10 mb-8" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1e40af" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <h4 class="text-2xl md:text-3xl font-black text-gray-900">Integration & Financial Performance</h4>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-indigo-50 p-6 rounded-2xl">
+            <h5 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Unified Integration Layer</h5>
+            <p class="text-gray-700 leading-relaxed">Connects SELIS HEALTH with HIMS (e.g., Cerner, Epic, TrakCare), ERP, and HR systems — creating one trusted source of truth</p>
+          </div>
+          <div class="bg-cyan-50 p-6 rounded-2xl">
+            <h5 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Financial Performance Dashboards</h5>
+            <p class="text-gray-700 leading-relaxed">Track spending against budget and forecast costs dynamically, ensuring financial discipline</p>
+          </div>
+          <div class="bg-violet-50 p-6 rounded-2xl">
+            <h5 class="text-lg md:text-xl font-bold text-gray-900 mb-3">AI Alerts and Predictive Models</h5>
+            <p class="text-gray-700 leading-relaxed">Flag deviations early, empowering leaders to act before problems escalate</p>
+          </div>
+          <div class="bg-pink-50 p-6 rounded-2xl">
+            <h5 class="text-lg md:text-xl font-bold text-gray-900 mb-3">In-Platform Collaboration Hub</h5>
+            <p class="text-gray-700 leading-relaxed">Unifies conversations, document sharing, and task tracking in one place</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Solution Group 3: Centralized Platform & Standards -->
+      <div class="bg-white rounded-3xl shadow-xl p-6 md:p-10" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <h4 class="text-2xl md:text-3xl font-black text-gray-900">Centralized Platform & Standards</h4>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-emerald-50 p-6 rounded-2xl">
+            <h5 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Centralised Platform</h5>
+            <p class="text-gray-700 leading-relaxed">Enables cross-entity visibility and benchmarking aligned to Ministry and Vision 2030 priorities</p>
+          </div>
+          <div class="bg-lime-50 p-6 rounded-2xl">
+            <h5 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Knowledge Repositories</h5>
+            <p class="text-gray-700 leading-relaxed">Store insights and best practices for institutional learning and reuse</p>
+          </div>
+          <div class="bg-teal-50 p-6 rounded-2xl">
+            <h5 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Executive Dashboards</h5>
+            <p class="text-gray-700 leading-relaxed">Give leadership real-time oversight of KPIs, initiatives, and risks across all hospitals and clusters</p>
+          </div>
+          <div class="bg-sky-50 p-6 rounded-2xl">
+            <h5 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Standardized Dashboards</h5>
+            <p class="text-gray-700 leading-relaxed">Ensure all departments measure quality and compliance consistently, aligned with national standards</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ASK SELIS AI -->
+  <section class="max-w-7xl mx-auto py-16 md:py-24 px-4 md:px-6">
+    <div class="text-center mb-12 md:mb-16">
+      <div class="flex items-center justify-center gap-3 mb-4">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+          <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+      </div>
+      <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-6" data-aos="fade-up">Ask SELIS HEALTH AI Companion</h3>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+        Ask SELIS HEALTH AI acts as an intelligent assistant for every professional. It enables users to:
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="300">
+      <div class="bg-gradient-to-br from-teal-500 to-green-500 text-white p-6 rounded-2xl shadow-lg">
+        <h5 class="text-xl font-bold mb-3">📊 Instant Data Queries</h5>
+      </div>
+      <div class="bg-gradient-to-br from-blue-500 to-indigo-500 text-white p-6 rounded-2xl shadow-lg">
+        <h5 class="text-xl font-bold mb-3">📈 Generate Analytical Insights</h5>
+      </div>
+      <div class="bg-gradient-to-br from-purple-500 to-pink-500 text-white p-6 rounded-2xl shadow-lg">
+        <h5 class="text-xl font-bold mb-3">🤖 Automate Reports</h5>
+      </div>
+      <div class="bg-gradient-to-br from-green-500 to-teal-500 text-white p-6 rounded-2xl shadow-lg">
+        <h5 class="text-xl font-bold mb-3">💡 Suggest Actions</h5>
+      </div>
+      <div class="bg-gradient-to-br from-orange-500 to-red-500 text-white p-6 rounded-2xl shadow-lg">
+        <h5 class="text-xl font-bold mb-3">⚠️ Risk Prediction</h5>
+      </div>
+      <div class="bg-gradient-to-br from-cyan-500 to-blue-500 text-white p-6 rounded-2xl shadow-lg">
+        <h5 class="text-xl font-bold mb-3">🎯 Resource Optimization</h5>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTEGRATION -->
+  <section id="integration" class="bg-gray-900 text-white py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-12 md:mb-16">
+        <h3 class="text-3xl sm:text-4xl md:text-5xl font-black mb-6" data-aos="fade-up">Seamless Integration with SELIS HEALTH Ecosystem</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20" data-aos="fade-right">
+          <h5 class="text-2xl font-bold mb-4">🔗 Data Unification</h5>
+          <p class="opacity-90 leading-relaxed">Unify data across clinical, financial, and operational domains through secure APIs and modular connectors. Create a single source of truth for decision-makers.</p>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20" data-aos="fade-left">
+          <h5 class="text-2xl font-bold mb-4">✅ Compliant HL7</h5>
+          <p class="opacity-90 leading-relaxed">Integrations with existing EHRs & digital health platforms</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20" data-aos="fade-right" data-aos-delay="100">
+          <h5 class="text-2xl font-bold mb-4">🏢 Enterprise Integration</h5>
+          <p class="opacity-90 leading-relaxed">Integrate with existing enterprise software (e.g. ERP)</p>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20" data-aos="fade-left" data-aos-delay="100">
+          <h5 class="text-2xl font-bold mb-4">📊 One Source for Live Accurate Data</h5>
+          <p class="opacity-90 leading-relaxed">One source for live accurate data</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section id="impact" class="max-w-7xl mx-auto py-16 md:py-24 px-4 md:px-6">
+    <div class="text-center mb-12 md:mb-16">
+        <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-6" data-aos="fade-up">Driving Excellence with SELIS HEALTH</h3>
+    </div>
+
+    <div class="bg-gradient-to-br from-teal-50 to-green-50 rounded-3xl p-8 md:p-12 mb-12" data-aos="fade-up" data-aos-delay="200">
+      <p class="text-xl md:text-2xl text-gray-800 leading-relaxed text-center mb-6">
+        Empower leaders to align hospital and cluster-level initiatives with national priorities — ensuring that every program contributes directly to Vision 2030
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      <div class="bg-white p-8 rounded-3xl shadow-lg text-center" data-aos="zoom-in">
+        <div class="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <h5 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">SELIS HEALTH Excellence</h5>
+        <p class="text-gray-600">Achieving the highest quality standards with SELIS HEALTH</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-3xl shadow-lg text-center" data-aos="zoom-in" data-aos-delay="100">
+        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="2">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+        </div>
+        <h5 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">Digital Transformation</h5>
+        <p class="text-gray-600">Modernizing systems with advanced technologies</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-3xl shadow-lg text-center" data-aos="zoom-in" data-aos-delay="200">
+        <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1e40af" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <h5 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">Patient Satisfaction</h5>
+        <p class="text-gray-600">Elevating patient experience and service quality</p>
+      </div>
+    </div>
+
+    <div class="mt-16 bg-gradient-to-r from-teal-600 to-green-600 text-white rounded-3xl p-8 md:p-12 text-center" data-aos="fade-up">
+      <p class="text-xl md:text-2xl font-bold leading-relaxed mb-4">
+        SELIS HEALTH — Your Partner in Transformation
+      </p>
+      <p class="text-lg md:text-xl opacity-90 leading-relaxed">
+        SELIS HEALTH ensures strategy, health objectives, and patient care are delivered with excellence — empowering a collaborative ecosystem driven by insight, automation, and AI to turn your vision into reality
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="healthcare-gradient py-16 md:py-20">
+    <div class="max-w-4xl mx-auto px-4 md:px-6 text-center">
+      <h3 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6" data-aos="fade-up">Start Your SELIS HEALTH Digital Transformation Journey Now</h3>
+      <p class="text-lg md:text-xl text-white opacity-90 mb-10" data-aos="fade-up" data-aos-delay="100">
+        Join leading institutions in achieving Vision 2030 with SELIS HEALTH
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" data-aos="zoom-in" data-aos-delay="200">
+        <a href="https://wa.me/966599343529" target="_blank" class="inline-flex items-center gap-3 bg-white text-teal-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-lg">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          <span>Contact via WhatsApp</span>
+        </a>
+        
+        <a href="index-sa-en.html" class="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-teal-700 transition">
+          Back to Home
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-8 md:py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
+        <div class="text-center md:text-left">
+          <a href="https://calx.sa" target="_blank" rel="noopener noreferrer">
+            <img src="logo4.png" alt="Selis" class="h-10 md:h-12 mb-4 mx-auto md:mx-0 hover:opacity-80 transition" loading="lazy">
+          </a>
+          <p class="text-gray-400 text-sm md:text-base">SELIS HEALTH</p>
+        </div>
+        <div class="flex gap-4 md:gap-8 text-gray-400 text-sm md:text-base flex-wrap justify-center">
+          <a href="#home" class="hover:text-white transition">Home</a>
+          <a href="#problem" class="hover:text-white transition">Challenges</a>
+          <a href="#solutions" class="hover:text-white transition">Solutions</a>
+          <a href="#integration" class="hover:text-white transition">Integration</a>
+          <a href="index-sa-en.html" class="hover:text-teal-400 transition">Back to Main</a>
+        </div>
+      </div>
+      <div class="text-center mt-6 md:mt-8 text-gray-400 border-t border-gray-800 pt-6 md:pt-8">
+        <div class="mb-4">
+          <p class="mb-2 text-sm md:text-base"><strong>Contact:</strong> Dani Sinai</p>
+          <p class="mb-1 text-sm md:text-base">WhatsApp: <a href="https://wa.me/966599343529" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">+966 59 934 3529</a></p>
+          <p class="text-sm md:text-base">Email: <a href="mailto:dsinai@calx.sa" class="hover:text-white transition">dsinai@calx.sa</a></p>
+        </div>
+        <p class="text-gray-500 text-xs md:text-sm">Copyright © 2025–2026 — CALX & SELIS HEALTH. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/966599343529?text=I%20would%20like%20to%20schedule%20a%20meeting" target="_blank" class="whatsapp-float" aria-label="Contact via WhatsApp">
+    <span class="whatsapp-tooltip">Schedule Meeting</span>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+    
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('header button[aria-label="Menu"]');
+    const mobileNav = document.querySelector('header nav');
+    
+    if (mobileMenuBtn && mobileNav) {
+      mobileMenuBtn.addEventListener('click', function() {
+        mobileNav.classList.toggle('hidden');
+        mobileNav.classList.toggle('flex');
+        mobileNav.classList.toggle('flex-col');
+        mobileNav.classList.toggle('absolute');
+        mobileNav.classList.toggle('top-16');
+        mobileNav.classList.toggle('left-0');
+        mobileNav.classList.toggle('bg-white');
+        mobileNav.classList.toggle('shadow-lg');
+        mobileNav.classList.toggle('rounded-lg');
+        mobileNav.classList.toggle('p-4');
+        mobileNav.classList.toggle('w-48');
+      });
+    }
+  </script>
+
+</body>
+</html>
